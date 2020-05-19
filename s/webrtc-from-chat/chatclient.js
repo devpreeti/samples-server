@@ -227,10 +227,15 @@ async function createPeerConnection() {
 
   myPeerConnection = new RTCPeerConnection({
     iceServers: [     // Information about ICE servers - Use your own!
-      {
-        urls: "turn:" + myHostname,  // A TURN server
-        username: "webrtc",
-        credential: "turnserver"
+        url:'stun:stun.softjoys.com',
+        url: 'turn:numb.viagenie.ca',
+        credential: 'muazkh',
+        username: 'webrtc@live.com'
+
+
+//         urls: "turn:" + myHostname,  // A TURN server
+//         username: "webrtc",
+//         credential: "turnserver"
       }
     ]
   });
